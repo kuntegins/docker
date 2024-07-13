@@ -11,8 +11,9 @@ LABEL   descripton="Thi is my first image" \
         maintainer="kuntegins"
 
 # install telnet
-RUN apt-get update -y
-RUN apt-get install telnet -y
+RUN     apt-get update -y  && \
+        apt-get install telnet -y && \
+        apt-get install apache2 -y
 
 # Open port 80 on container
 EXPOSE 80
